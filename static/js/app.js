@@ -41,6 +41,11 @@ function handleClick() {
     // rows where the 'datetime' value matches the filter  value
     filteredData = filteredData.filter((row) => row.datetime === date);
   }
+
+  // Rebuild the table using the filtered data
+  // @NOTE: if no date was entered, then filteredData will
+  // just be the original tableData.
+  buildTable(filteredData);
 }
 
 //Attach an event to listen for the form button
